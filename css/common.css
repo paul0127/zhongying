@@ -1,0 +1,80 @@
+html {
+  font-size: 16px;
+}
+body {
+  position: relative;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+header {
+  display: flex;
+  align-items: center;
+  max-width: 1750px;
+  margin: 0 auto;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 99;
+}
+header a.logo {
+  font-size: 2.75rem;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+header ul.head_nav {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  margin-left: auto;
+  display: flex;
+}
+header ul.head_nav li {
+  margin-right: 80px;
+}
+header ul.head_nav li a {
+  color: rgb(2 107 164);
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+header .search {
+  position: relative;
+}
+header .search::before {
+  content: '\f002';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  font-size: 1.75rem;
+  color: rgb(2 107 164);
+}
+header .search input[type='text'] {
+  font-size: 1.75rem;
+  border: 1px solid rgb(2 107 164);
+  background-color: unset;
+  padding: 10px 0 10px 70px;
+  border-radius: 50px;
+  width: 120px;
+  outline: none;
+  transition: width 0.3s ease-in;
+}
+header .search input[type='text'].active {
+  width: 220px;
+}
+header .search input[type='text']::placeholder {
+  color: rgb(2 107 164);
+  font-weight: 300;
+}
+
+.contain {
+  max-width: 1658px;
+  margin: 0 auto;
+}
