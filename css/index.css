@@ -1,5 +1,6 @@
 @import url(./common.css);
 
+/*top*/
 .index_top {
   position: relative;
   padding-bottom: 55%;
@@ -73,7 +74,7 @@
 .index_top .text .arrow_down:hover i {
   transform: translateY(5px);
 }
-
+/*關於我們*/
 .index_about {
 }
 .index_about .con {
@@ -161,14 +162,14 @@
   width: 810px;
   position: absolute;
   left: 50%;
-  bottom: -30%;
+  bottom: -20%;
   transform: translateX(-70%);
 }
 /*所有商品*/
 .index_products {
   background-color: #efefef;
   margin-top: -100px;
-  padding-top: 500px;
+  padding-top: 400px;
   padding-bottom: 75px;
 }
 .index_products .title {
@@ -185,7 +186,7 @@
   border-bottom: 2px solid rgb(27 113 160);
 }
 .index_products .title span {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   color: rgb(27 113 160);
   font-weight: 700;
   position: relative;
@@ -198,7 +199,7 @@
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 75px;
-  border-bottom: 1px solid rgb(27 113 160);
+  border-bottom: 2px solid rgb(27 113 160);
   margin-bottom: 35px;
 }
 .index_products .list a.item {
@@ -262,7 +263,7 @@
 .index_products .more a:hover {
   opacity: 0.8;
 }
-
+/*購買流程*/
 .index_float {
   display: flex;
   justify-content: flex-end;
@@ -283,7 +284,7 @@
   height: 100%;
   background-color: #fff;
   z-index: -1;
-  opacity: 0.65;
+  opacity: 0.75;
 }
 .index_float .text .con {
   padding: 140px 275px 100px 165px;
@@ -299,16 +300,16 @@
   margin-bottom: 35px;
 }
 .index_float .text .con .title::after {
-    content: '';
-    display: block;
-    width: 165px;
-    border-bottom: 10px solid rgb(27 113 160);
-    margin-top: 35px;
+  content: '';
+  display: block;
+  width: 165px;
+  border-bottom: 10px solid rgb(27 113 160);
+  margin-top: 35px;
 }
 .index_float .text .con .title span.arrow_right {
   width: 40px;
   height: 40px;
-  border: 5px solid rgb(27 113 160);
+  border: 4px solid rgb(27 113 160);
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -319,8 +320,59 @@
 .index_float .text .con .title span.arrow_right i {
   font-size: 2.25rem;
 }
-.index_float .text .con .desc{
-    font-size: 2rem;
-    line-height: 2;
-    letter-spacing: 2px;
+.index_float .text .con .desc {
+  font-size: 2rem;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+.index_news {
+  margin: 80px auto;
+  max-width: 1160px;
+  width: 100%;
+}
+.index_news .title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: rgb(27 113 160);
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 10px;
+}
+/*最新消息*/
+.index_news .sub_title {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 5px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgb(27 113 160);
+}
+.index_news .sub_title::before {
+  content: '-';
+  margin-right: 20px;
+}
+.index_news .sub_title::after {
+  content: '-';
+  margin-left: 20px;
+}
+.index_news .list {
+  padding-top: 25px;
+}
+.index_news .item {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #333;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgb(27 113 160);
+  margin-bottom: 25px;
+}
+.index_news .item:last-child {
+  margin-bottom: 0;
+  border: none;
+}
+.index_news .item .time {
+  color: rgb(27 113 160);
+  margin-right: 85px;
 }

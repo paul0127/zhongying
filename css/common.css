@@ -42,6 +42,9 @@ header ul.head_nav li a {
   font-size: 1.75rem;
   font-weight: 300;
 }
+header ul.head_nav li a:hover {
+  opacity: 0.8;
+}
 header .search {
   position: relative;
 }
@@ -77,4 +80,71 @@ header .search input[type='text']::placeholder {
 .contain {
   max-width: 1658px;
   margin: 0 auto;
+}
+
+footer {
+  background-color: rgb(1 133 205);
+  padding: 70px 0 100px 0;
+}
+footer .con {
+  display: flex;
+}
+footer .con .left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .con .left .foot_logo {
+  margin-bottom: 60px;
+}
+footer .con .left .foot_logo a {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 10px;
+}
+footer .con .left .social {
+  display: flex;
+  margin-bottom: 60px;
+}
+footer .con .left .social a {
+  font-size: 4rem;
+  margin-right: 35px;
+  color: #fff;
+  text-decoration: none;
+}
+footer .con .left .social a:hover {
+  opacity: 0.8;
+}
+footer .con .left .social a:last-child {
+  margin-right: 0;
+}
+footer .con .left .business_hours {
+  display: flex;
+  font-size: 1.75rem;
+  color: #fff;
+  line-height: 1.75;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+footer .con .right {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+}
+footer .con .right .info {
+  max-width: 700px;
+  color: #fff;
+  font-size: 2rem;
+}
+footer .con .right .info .item {
+  font-weight: 300;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+}
+footer .con .right .info .item label {
+  margin-right: 45px;
 }
