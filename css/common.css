@@ -119,6 +119,9 @@ header .head_contain .search_btn {
   header {
     top: 0;
   }
+  header .head_contain ul.head_nav{
+    display: none;
+  }
 }
 
 .contain {
