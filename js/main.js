@@ -85,3 +85,33 @@ if (left_menu) {
     }
   })
 }
+
+let qty = document.querySelector('.product_info .top .qty .input input')
+let minus = document.querySelector('.product_info .top .qty .input .minus')
+let plus = document.querySelector('.product_info .top .qty .input .plus')
+
+if(qty){
+minus.addEventListener('click',()=>{
+  if(qty.value>1)qty.value = Number(qty.value) - 1
+})
+plus.addEventListener('click',()=>{
+  qty.value = Number(qty.value) + 1
+})
+}
+
+let tabs = document.querySelectorAll('.product_info .bottom ul.tabs li')
+let panels = document.querySelectorAll('.product_info .bottom ul.panels li')
+tabs.forEach((item,index)=>{
+  item.addEventListener('click',()=>{
+    remove_class(tabs)
+    remove_class(panels)
+    item.classList.add('active')
+    panels[index].classList.add('active')
+  })
+})
+
+function remove_class(item){
+  item.forEach(item=>{
+    item.classList.remove('active')
+  })
+}

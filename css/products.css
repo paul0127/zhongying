@@ -155,9 +155,10 @@
 }
 .product_frame .product_border .product_info .top {
   display: flex;
+  margin-bottom: 170px;
 }
 .product_frame .product_border .product_info .top .main_pic {
-  flex: 1;
+  flex: 4;
 }
 .product_frame .product_border .product_info .top .main_pic .image {
   width: 100%;
@@ -167,7 +168,7 @@
   border: 1px solid #333;
 }
 .product_frame .product_border .product_info .top .text {
-  flex: 1;
+  flex: 3;
   padding-left: 50px;
 }
 .product_frame .product_border .product_info .top .text .name {
@@ -175,7 +176,7 @@
   margin-bottom: 50px;
 }
 .product_frame .product_border .product_info .top .text .desc {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   padding-bottom: 60px;
   margin-bottom: 30px;
   border-bottom: 1px solid #333;
@@ -184,8 +185,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
-.product_frame .product_border .product_info .top .text .price_qty .price{
+.product_frame .product_border .product_info .top .text .price_qty .price {
   font-size: 2rem;
 }
 .product_frame .product_border .product_info .top .text .price_qty .qty {
@@ -226,6 +228,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: #aaa;
 }
 .product_frame
   .product_border
@@ -244,4 +247,51 @@
   text-align: center;
   font-size: 1.5rem;
   background-color: transparent;
+}
+.product_frame .product_border .product_info .top .text .add_cart{
+  display: flex;
+  justify-content: flex-end;
+}
+.product_frame .product_border .product_info .top .text .add_cart a{
+  width: 230px;
+  height: 60px;
+  background-color: #0185cd;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.product_frame .product_border .product_info .top .text .add_cart a:hover{
+  opacity: .8;
+}
+.product_frame .product_border .product_info .bottom ul.tabs{
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0;
+}
+.product_frame .product_border .product_info .bottom ul.tabs li{
+  font-size: 1.75rem;
+  padding: 0 30px 30px 30px;
+  cursor: pointer;
+}
+.product_frame .product_border .product_info .bottom ul.tabs li.active{
+  border-bottom: 2px solid #0185cd;
+}
+.product_frame .product_border .product_info .bottom ul.panels{
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 80px;
+}
+.product_frame .product_border .product_info .bottom ul.panels li{
+  padding-top: 70px;
+  display: none;
+}
+.product_frame .product_border .product_info .bottom ul.panels li.active{
+  display: block;
 }

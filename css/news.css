@@ -1,0 +1,61 @@
+@import url(./common.css);
+
+.news_page {
+  margin-top: 170px;
+}
+.news_page .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0185cd;
+  letter-spacing: 10px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #0185cd;
+  position: relative;
+}
+.news_page .title::after {
+    content: 'NEWS';
+    position: absolute;
+    top: 20px;
+    right: 0;
+    transform: translateY(-50%);
+    color: #eaeaea;
+    font-size: 8.25rem;
+    letter-spacing: 15px;
+}
+.news_page .desc {
+  padding-top: 80px;
+}
+.news_page .time{
+    color: #0185cd;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 180px;
+}
+.news_page .contact_btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+}
+.news_page .contact_btn a{
+    width: 170px;
+    height: 50px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #0185cd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 45px;
+    text-decoration: none;
+}
+.news_page .contact_btn a:hover{
+    opacity: .8;
+}
+.news_page .contact_btn .txt{
+    font-size: 1.65rem;
+    color: #585858;
+}
