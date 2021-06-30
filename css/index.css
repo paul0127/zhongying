@@ -105,7 +105,7 @@
     right: unset;
     width: 100%;
     transform: translateX(-50%);
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,13 +116,31 @@
     width: 100px;
     border-bottom: 2px solid #fff;
   }
-  .index_top .text{
-    width: 208px;
+  .index_top .text {
     bottom: 30px;
   }
   .index_top .text span {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
+    display: block;
+    white-space: nowrap;
+  }
+  .index_top .text .arrow_down {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    border-width: 3px;
+  }
+}
+@media (max-width: 500px) {
+  .index_top {
+    padding-bottom: 120%;
+  }
+  .index_top .title {
+    font-size: 1.25rem;
+  }
+  .index_top .text span {
+    font-size: 1rem;
   }
   .index_top .text .arrow_down {
     width: 35px;
@@ -245,11 +263,11 @@
   .index_about .con .left ul.list {
     margin: 0;
   }
-  .index_about .con .left ul.list li{
+  .index_about .con .left ul.list li {
     margin-right: 60px;
     font-size: 1rem;
   }
-  .index_about .con .left ul.list li img{
+  .index_about .con .left ul.list li img {
     margin-bottom: 15px;
   }
   .index_about .con .right {
@@ -259,7 +277,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .index_about .con .right .title{
+  .index_about .con .right .title {
     font-size: 1.75rem;
     margin-bottom: 20px;
   }
@@ -382,10 +400,10 @@
     margin: 0;
     padding: 50px 0;
   }
-  .index_products .title{
+  .index_products .title {
     margin-bottom: 30px;
   }
-  .index_products .title span{
+  .index_products .title span {
     font-size: 1.75rem;
     padding: 0 50px;
   }
@@ -399,7 +417,7 @@
   .index_products .more {
     justify-content: center;
   }
-  .index_products .more a{
+  .index_products .more a {
     width: 138px;
     height: 40px;
     font-size: 1.25rem;
@@ -491,7 +509,7 @@
     align-items: center;
     font-size: 1.75rem;
   }
-  .index_float .text .con .title::after{
+  .index_float .text .con .title::after {
     margin-top: 20px;
     width: 130px;
     border-width: 2px;
@@ -572,22 +590,22 @@
   margin-right: 85px;
 }
 @media (max-width: 1200px) {
-  .index_news{
+  .index_news {
     margin: 50px auto;
   }
-  .index_news .con .title{
+  .index_news .con .title {
     font-size: 1.75rem;
   }
-  .index_news .con .sub_title{
+  .index_news .con .sub_title {
     font-size: 1.25rem;
   }
   .index_news .con .list {
     padding: 25px 0 0 0;
   }
-  .index_news .con .list .item{
+  .index_news .con .list .item {
     font-size: 1.25rem;
   }
-  .index_news .con .list .item .time{
+  .index_news .con .list .item .time {
     margin-right: 10px;
   }
 }

@@ -83,12 +83,12 @@ header .head_contain .serch_block .search input[type='text'] {
   background-color: unset;
   padding: 10px 0 10px 70px;
   border-radius: 50px;
-  width: 120px;
+  width: 200px;
   outline: none;
   transition: width 0.3s ease-in;
 }
 header .head_contain .serch_block.active .search input[type='text'] {
-  width: 220px;
+  width: 250px;
 }
 header .head_contain .serch_block .search input[type='text']::placeholder {
   color: rgb(2 107 164);
@@ -144,10 +144,10 @@ header .head_contain .search_btn {
   header .head_contain .serch_block .search input[type='text'] {
     width: 300px;
     background-color: #fff;
+    font-size: 1.25rem;
   }
   header .head_contain .serch_block.active .search input[type='text'] {
     width: 300px;
-    background-color: #fff;
   }
   header .head_contain .search_btn {
     display: block;
@@ -202,6 +202,67 @@ header .head_contain .search_btn {
   padding: 0 15px;
 }
 
+.page_top_banner{
+  padding-bottom: 22%;
+  background-size: cover;
+  background-position: center 40%;
+  position: relative;
+}
+.page_top_banner::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:  rgb(27 113 160);
+  opacity: .2;
+}
+.page_top_banner::after{
+  content: attr(data-name);
+  font-size: 7rem;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+  opacity: .4;
+  letter-spacing: 25px;
+}
+
+/*麵包屑*/
+ul.bread{
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  padding: 40px 0;
+  font-size: 1.85rem;
+}
+ul.bread li{
+  color: #64a7c7;
+  letter-spacing: 10px;
+  font-weight: 500;
+  display: flex;
+}
+ul.bread li::after{
+  content: '/';
+  margin: 0 20px;
+}
+ul.bread li:last-child:after{
+  display: none;
+}
+ul.bread li a{
+  color: #0185cd;
+  text-decoration: none;
+}
+ul.bread li a:hover{
+  opacity: .8;
+}
+ul.bread li a i{
+  margin-right: 20px;
+}
+
 footer {
   background-color: rgb(1 133 205);
   padding: 70px 0 100px 0;
@@ -249,6 +310,9 @@ footer .con .left .business_hours {
   line-height: 1.75;
   letter-spacing: 5px;
   font-weight: 300;
+}
+footer .con .left .business_hours label{
+  margin-bottom: 0;
 }
 footer .con .right {
   flex: 3;
