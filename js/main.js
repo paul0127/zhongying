@@ -32,10 +32,10 @@ window.addEventListener('click', (event) => {
 })
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 1450) {
+  if (window.innerWidth > 1200) {
     body.classList.remove('fixed')
   } else if (
-    window.innerWidth <= 1450 &&
+    window.innerWidth <= 1200 &&
     search_block.classList.contains('active')
   ) {
     body.classList.add('fixed')

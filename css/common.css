@@ -17,25 +17,24 @@ header {
   max-width: 100%;
   margin: 0 auto;
   position: absolute;
-  top: 70px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 1780px;
   z-index: 99;
 }
 header .head_contain {
-  padding: 0 15px;
   display: flex;
   align-items: center;
 }
-header .head_contain .menu_btn{
+header .head_contain .menu_btn {
   font-size: 1.75rem;
   color: #fff;
   display: none;
   cursor: pointer;
 }
 header .head_contain a.logo {
-  font-size: 2.75rem;
+  font-size: 1.75rem;
   color: #fff;
   font-weight: bold;
   letter-spacing: 5px;
@@ -52,13 +51,13 @@ header .head_contain ul.head_nav {
   display: flex;
 }
 header .head_contain ul.head_nav li {
-  margin-right: 80px;
+  margin-right: 40px;
 }
 header ul.head_nav li a {
   color: rgb(2 107 164);
   text-decoration: none;
-  font-size: 1.75rem;
-  font-weight: 300;
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 header.white ul.head_nav li a {
   color: #fff;
@@ -75,21 +74,21 @@ header .head_contain .serch_block .search::before {
   font-weight: 700;
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 20px;
   transform: translateY(-50%);
-  font-size: 1.75rem;
+  font-size: 1.15rem;
   color: rgb(2 107 164);
 }
 header.white .head_contain .serch_block .search::before {
   color: #fff;
 }
 header .head_contain .serch_block .search input[type='text'] {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   border: 1px solid rgb(2 107 164);
   background-color: unset;
-  padding: 10px 0 10px 70px;
+  padding: 5px 0 5px 50px;
   border-radius: 50px;
-  width: 200px;
+  width: 130px;
   outline: none;
   transition: width 0.3s ease-in;
 }
@@ -98,13 +97,17 @@ header.white .head_contain .serch_block .search input[type='text'] {
   color: #fff;
 }
 header .head_contain .serch_block.active .search input[type='text'] {
-  width: 250px;
+  width: 170px;
 }
 header .head_contain .serch_block .search input[type='text']::placeholder {
   color: rgb(2 107 164);
   font-weight: 300;
 }
-header.white .head_contain .serch_block .search input[type='text']::placeholder {
+header.white
+  .head_contain
+  .serch_block
+  .search
+  input[type='text']::placeholder {
   color: #fff;
 }
 header .head_contain .search_btn {
@@ -113,16 +116,56 @@ header .head_contain .search_btn {
   display: none;
   cursor: pointer;
 }
-@media (max-width: 1700px) {
+@media (max-width: 1200px) {
   header {
     top: 0;
-    padding-top: 40px;
+    padding: 15px 0;
+  }
+  header .head_contain .menu_btn {
+    display: block;
+    margin-right: auto;
+  }
+  header .head_contain a.logo {
+    font-size: 1.5rem;
+  }
+  header .head_contain ul.head_nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(51 51 51 / 70%);
+    display: block;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition-duration: 0.3s;
+  }
+  header .head_contain ul.head_nav.active {
+    transform: scaleY(1);
   }
   header .head_contain ul.head_nav li {
-    margin-right: 50px;
+    margin: 0;
+    padding: 15px;
   }
-}
-@media (max-width: 1450px) {
+  header .head_contain ul.head_nav li a {
+    font-size: 1.25rem;
+    color: #fff;
+    display: block;
+  }
+  header.white
+    .head_contain
+    .serch_block
+    .search
+    input[type='text']::placeholder {
+    color: #0185cd;
+  }
+  header.white .head_contain .serch_block .search::before {
+    color: #0185cd;
+  }
+  header .head_contain .search_btn {
+    margin-left: auto;
+    display: block;
+    color: #fff;
+  }
   header .head_contain .serch_block {
     position: fixed;
     top: 0;
@@ -133,7 +176,7 @@ header .head_contain .search_btn {
     height: 100vh;
     transform: scaleY(0);
     transform-origin: top;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +189,7 @@ header .head_contain .search_btn {
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: .5;
+    opacity: 0.5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,65 +200,12 @@ header .head_contain .search_btn {
   header .head_contain .serch_block .search input[type='text'] {
     width: 300px;
     background-color: #fff;
+    border-color: #0185cd;
+    color: #0185cd;
     font-size: 1.25rem;
   }
   header .head_contain .serch_block.active .search input[type='text'] {
     width: 300px;
-  }
-  header .head_contain .search_btn {
-    display: block;
-  }
-}
-@media (max-width: 1200px) {
-  header {
-    top: 0;
-    padding: 15px 0;
-  }
-  header .head_contain .menu_btn{
-    display: block;
-    margin-right: auto;
-  }
-  header .head_contain a.logo{
-    font-size: 1.5rem;
-  }
-  header .head_contain ul.head_nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: rgb(51 51 51 / 70%);
-    display: block;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition-duration: .3s;
-  }
-  header .head_contain ul.head_nav.active {
-    transform: scaleY(1);
-  }
-  header .head_contain ul.head_nav li{
-    margin: 0;
-    padding: 15px;
-  }
-  header .head_contain ul.head_nav li a{
-    font-size: 1.25rem;
-    color: #fff;
-    display: block;
-  }
-  header.white .head_contain .serch_block .search input[type='text']{
-    border-color: #0185cd;
-    color: #0185cd;
-  }
-  header.white .head_contain .serch_block .search input[type='text']::placeholder {
-    color: #0185cd;
-  }
-  header.white .head_contain .serch_block .search::before{
-    color: #0185cd;
-  }
-  header .head_contain .search_btn {
-    margin-left: auto;
-  }
-  header .head_contain .search_btn {
-    color: #fff;
   }
 }
 
@@ -225,23 +215,23 @@ header .head_contain .search_btn {
   padding: 0 15px;
 }
 
-.page_top_banner{
+.page_top_banner {
   padding-bottom: 22%;
   background-size: cover;
   background-position: center 40%;
   position: relative;
 }
-.page_top_banner::before{
+.page_top_banner::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:  rgb(27 113 160);
-  opacity: .2;
+  background-color: rgb(27 113 160);
+  opacity: 0.2;
 }
-.page_top_banner::after{
+.page_top_banner::after {
   content: attr(data-name);
   font-size: 7rem;
   font-weight: 700;
@@ -249,13 +239,13 @@ header .head_contain .search_btn {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-30%);
-  opacity: .4;
+  transform: translate(-50%, -30%);
+  opacity: 0.4;
   letter-spacing: 25px;
 }
 
 /*麵包屑*/
-ul.bread{
+ul.bread {
   display: flex;
   list-style: none;
   padding-left: 0;
@@ -263,35 +253,36 @@ ul.bread{
   font-size: 1.85rem;
   margin-bottom: 0;
 }
-ul.bread li{
+ul.bread li {
   color: #64a7c7;
   letter-spacing: 10px;
   font-weight: 500;
   display: flex;
 }
-ul.bread li::after{
+ul.bread li::after {
   content: '/';
   margin: 0 20px;
 }
-ul.bread li:last-child:after{
+ul.bread li:last-child:after {
   display: none;
 }
-ul.bread li a{
+ul.bread li a {
   color: #0185cd;
   text-decoration: none;
 }
-ul.bread li a:hover{
-  opacity: .8;
+ul.bread li a:hover {
+  opacity: 0.8;
 }
-ul.bread li a i{
+ul.bread li a i {
   margin-right: 20px;
 }
 
-.editor{
+.editor {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
+/*頁尾*/
 footer {
   background-color: rgb(1 133 205);
   padding: 70px 0 100px 0;
@@ -300,14 +291,14 @@ footer .con {
   display: flex;
 }
 footer .con .left {
-  flex: 2;
+  flex: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 footer .con .left a.foot_logo {
-  margin-bottom: 60px;
-  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
   color: #fff;
@@ -318,11 +309,11 @@ footer .con .left a.foot_logo:hover {
 }
 footer .con .left .social {
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 footer .con .left .social a {
-  font-size: 4rem;
-  margin-right: 35px;
+  font-size: 3rem;
+  margin-right: 20px;
   color: #fff;
   text-decoration: none;
 }
@@ -334,48 +325,41 @@ footer .con .left .social a:last-child {
 }
 footer .con .left .business_hours {
   display: flex;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   color: #fff;
   line-height: 1.75;
   letter-spacing: 5px;
   font-weight: 300;
 }
-footer .con .left .business_hours label{
+footer .con .left .business_hours label {
   margin-bottom: 0;
 }
 footer .con .right {
   flex: 3;
   display: flex;
   justify-content: flex-end;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 footer .con .right .info {
   max-width: 700px;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 footer .con .right .info .item {
   font-weight: 300;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   letter-spacing: 3px;
   display: flex;
 }
-footer .con .right .info .item:last-child{
+footer .con .right .info .item:last-child {
   margin-bottom: 0;
 }
 footer .con .right .info .item label {
-  margin-right: 45px;
-}
-@media (max-width: 1450px) {
-  footer .con .left .business_hours{
-    font-size: 1.5rem;
-  }
-  footer .con .right .info{
-    font-size: 1.5rem;
-  }
+  margin-right: 30px;
+  font-size: 1.5rem;
 }
 @media (max-width: 1200px) {
-  footer{
+  footer {
     padding: 50px 0;
   }
   footer .con {
@@ -385,31 +369,31 @@ footer .con .right .info .item label {
     flex: 0 0 100%;
     align-items: flex-start;
   }
-  footer .con .left a.foot_logo{
+  footer .con .left a.foot_logo {
     font-size: 1.5rem;
     margin-bottom: 30px;
   }
-  footer .con .left .social{
+  footer .con .left .social {
     margin-bottom: 30px;
   }
-  footer .con .left .social a{
+  footer .con .left .social a {
     font-size: 2rem;
   }
-  footer .con .left .business_hours{
+  footer .con .left .business_hours {
     font-size: 1.25rem;
     flex-direction: column;
   }
-  footer .con .left .business_hours label{
+  footer .con .left .business_hours label {
     margin-bottom: 10px;
   }
   footer .con .right {
     flex: 0 0 100%;
     justify-content: flex-start;
   }
-  footer .con .right .info{
+  footer .con .right .info {
     font-size: 1.25rem;
   }
-  footer .con .right .info .item label{
+  footer .con .right .info .item label {
     margin-right: 20px;
   }
 }
