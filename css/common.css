@@ -14,14 +14,20 @@ img {
   max-width: 100%;
 }
 header {
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   position: absolute;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 1780px;
   z-index: 99;
+}
+header.fixed {
+  position: fixed;
+  top: 0;
+  background-color: #0185cd;
+  padding: 20px 0;
 }
 header .head_contain {
   display: flex;
@@ -59,6 +65,9 @@ header ul.head_nav li a {
   font-size: 1.15rem;
   font-weight: 700;
 }
+header.fixed ul.head_nav li a {
+  color: #fff;
+}
 header.white ul.head_nav li a {
   color: #fff;
 }
@@ -79,6 +88,7 @@ header .head_contain .serch_block .search::before {
   font-size: 1.15rem;
   color: rgb(2 107 164);
 }
+header.fixed .head_contain .serch_block .search::before,
 header.white .head_contain .serch_block .search::before {
   color: #fff;
 }
@@ -92,6 +102,7 @@ header .head_contain .serch_block .search input[type='text'] {
   outline: none;
   transition: width 0.3s ease-in;
 }
+header.fixed .head_contain .serch_block .search input[type='text'],
 header.white .head_contain .serch_block .search input[type='text'] {
   border-color: #fff;
   color: #fff;
@@ -103,6 +114,7 @@ header .head_contain .serch_block .search input[type='text']::placeholder {
   color: rgb(2 107 164);
   font-weight: 300;
 }
+header.fixed .head_contain .serch_block .search input[type='text']::placeholder,
 header.white
   .head_contain
   .serch_block
@@ -216,9 +228,9 @@ header .head_contain .search_btn {
 }
 
 .page_top_banner {
-  padding-bottom: 22%;
+  height: 287px;
   background-size: cover;
-  background-position: center 40%;
+  background-position: center 38%;
   position: relative;
 }
 .page_top_banner::before {
@@ -233,35 +245,44 @@ header .head_contain .search_btn {
 }
 .page_top_banner::after {
   content: attr(data-name);
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #fff;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -30%);
   opacity: 0.4;
   letter-spacing: 25px;
 }
+@media (max-width: 1200px) {
+  .page_top_banner {
+    height: 200px;
+  }
+  .page_top_banner::after {
+    font-size: 3rem;
+    letter-spacing: 10px;
+  }
+}
 
 /*麵包屑*/
 ul.bread {
-  display: flex;
+  display: block;
   list-style: none;
   padding-left: 0;
-  padding: 40px 0;
-  font-size: 1.85rem;
+  padding: 30px 0;
+  font-size: 1.25rem;
   margin-bottom: 0;
 }
 ul.bread li {
   color: #64a7c7;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   font-weight: 500;
-  display: flex;
+  display: inline;
 }
 ul.bread li::after {
   content: '/';
-  margin: 0 20px;
+  margin: 0 10px;
 }
 ul.bread li:last-child:after {
   display: none;
@@ -274,24 +295,35 @@ ul.bread li a:hover {
   opacity: 0.8;
 }
 ul.bread li a i {
-  margin-right: 20px;
+  margin-right: 10px;
+}
+@media (max-width: 1200px) {
+  ul.bread {
+    padding: 15px 0;
+  }
+  ul.bread li {
+    letter-spacing: 2px;
+  }
+  ul.bread li::after {
+    margin: 0 3px;
+  }
 }
 
 .editor {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.5;
 }
 
 /*頁尾*/
 footer {
   background-color: rgb(1 133 205);
-  padding: 70px 0 100px 0;
+  padding: 50px 0 70px 0;
 }
 footer .con {
   display: flex;
 }
 footer .con .left {
-  flex: 3;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -335,10 +367,10 @@ footer .con .left .business_hours label {
   margin-bottom: 0;
 }
 footer .con .right {
-  flex: 3;
+  flex: 1;
   display: flex;
   justify-content: flex-end;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 footer .con .right .info {
   max-width: 700px;

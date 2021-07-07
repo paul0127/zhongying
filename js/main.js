@@ -1,4 +1,20 @@
 let body = document.querySelector('body')
+let header = document.querySelector('header')
+let header_bottom = header.offsetTop + header.offsetHeight
+
+/*初始化設定 */
+if(window.pageYOffset>header_bottom){
+  header.classList.add('fixed')
+}else{
+  header.classList.remove('fixed')
+}
+window.addEventListener('scroll',()=>{
+  if(window.pageYOffset>header_bottom){
+    header.classList.add('fixed')
+  }else{
+    header.classList.remove('fixed')
+  }
+})
 
 let menu_btn = document.querySelector('header .head_contain .menu_btn')
 let menu = document.querySelector('header .head_contain ul.head_nav')
@@ -84,25 +100,31 @@ if (left_menu) {
       })
     }
   })
+
+  let left_menu_title = left_menu.querySelector('.title')
+  let left_menu_ul = left_menu.querySelector('ul')
+  left_menu_title.addEventListener('click', () => {
+    left_menu_ul.classList.toggle('active')
+  })
 }
 
 let qty = document.querySelector('.product_info .top .qty .input input')
 let minus = document.querySelector('.product_info .top .qty .input .minus')
 let plus = document.querySelector('.product_info .top .qty .input .plus')
 
-if(qty){
-minus.addEventListener('click',()=>{
-  if(qty.value>1)qty.value = Number(qty.value) - 1
-})
-plus.addEventListener('click',()=>{
-  qty.value = Number(qty.value) + 1
-})
+if (qty) {
+  minus.addEventListener('click', () => {
+    if (qty.value > 1) qty.value = Number(qty.value) - 1
+  })
+  plus.addEventListener('click', () => {
+    qty.value = Number(qty.value) + 1
+  })
 }
 
 let tabs = document.querySelectorAll('.product_info .bottom ul.tabs li')
 let panels = document.querySelectorAll('.product_info .bottom ul.panels li')
-tabs.forEach((item,index)=>{
-  item.addEventListener('click',()=>{
+tabs.forEach((item, index) => {
+  item.addEventListener('click', () => {
     remove_class(tabs)
     remove_class(panels)
     item.classList.add('active')
@@ -110,8 +132,8 @@ tabs.forEach((item,index)=>{
   })
 })
 
-function remove_class(item){
-  item.forEach(item=>{
+function remove_class(item) {
+  item.forEach((item) => {
     item.classList.remove('active')
   })
 }

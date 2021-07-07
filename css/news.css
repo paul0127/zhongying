@@ -1,61 +1,82 @@
 @import url(./common.css);
 
 .news_page {
-  margin-top: 170px;
+  margin-top: 100px;
 }
 .news_page .title {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #0185cd;
-  letter-spacing: 10px;
-  padding-bottom: 40px;
+  letter-spacing: 5px;
+  padding-bottom: 25px;
   border-bottom: 2px solid #0185cd;
   position: relative;
 }
 .news_page .title::after {
-    content: 'NEWS';
-    position: absolute;
-    top: 20px;
-    right: 0;
-    transform: translateY(-50%);
-    color: #eaeaea;
-    font-size: 8.25rem;
-    letter-spacing: 15px;
+  content: 'NEWS';
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transform: translateY(-50%);
+  color: #eaeaea;
+  font-size: 6rem;
+  letter-spacing: 15px;
 }
 .news_page .desc {
-  padding-top: 80px;
+  padding-top: 55px;
 }
-.news_page .time{
-    color: #0185cd;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 180px;
+.news_page .time {
+  color: #0185cd;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 130px;
 }
-.news_page .contact_btn{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 120px;
+.news_page .contact_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
 }
-.news_page .contact_btn a{
-    width: 170px;
-    height: 50px;
-    border-radius: 50px;
-    color: #fff;
-    background-color: #0185cd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.75rem;
-    margin-bottom: 45px;
-    text-decoration: none;
+.news_page .contact_btn a {
+  width: 115px;
+  height: 35px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #0185cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  text-decoration: none;
 }
-.news_page .contact_btn a:hover{
-    opacity: .8;
+.news_page .contact_btn a:hover {
+  opacity: 0.8;
 }
-.news_page .contact_btn .txt{
-    font-size: 1.65rem;
-    color: #585858;
+.news_page .contact_btn .txt {
+  font-size: 1.25rem;
+  color: #585858;
+}
+@media (max-width: 1200px) {
+  .news_page{
+    margin-top: 40px;
+  }
+  .news_page .title{
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+  }
+  .news_page .title::after {
+    display: none;
+  }
+  .news_page .desc{
+    padding-top: 30px;
+  }
+  .news_page .time{
+    margin-bottom: 60px;
+  }
+  .news_page .contact_btn{
+    margin-bottom: 60px;
+  }
 }

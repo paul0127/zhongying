@@ -1,10 +1,6 @@
 @import url(./common.css);
 
-.about_page {
-  max-width: 1655px;
-  margin: 0 auto;
-  padding-left: 140px;
-}
+/*關於我們*/
 .about_page .top {
   display: flex;
 }
@@ -12,43 +8,44 @@
   margin-right: 60px;
   flex: 1;
   padding-top: 80px;
-  padding-bottom: 175px;
+  padding-bottom: 20px;
 }
 .about_page .top .text .title {
-  font-size: 3.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: #4d4d4d;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   letter-spacing: 10px;
 }
 .about_page .top .text .title::before {
   content: 'ABOUT US';
-  font-size: 9.75rem;
+  font-size: 6rem;
   font-weight: 700;
   letter-spacing: 10px;
   color: #eee;
   position: absolute;
   z-index: -1;
   top: 40%;
-  left: 130px;
+  left: 100px;
   transform: translateY(-50%);
 }
 .about_page .top .text .desc {
-  font-size: 2rem;
-  line-height: 2;
+  font-size: 1.5rem;
+  line-height: 1.5;
   letter-spacing: 5px;
+  font-weight: 500;
 }
 .about_page .top .item_list {
-  flex: 0 0 340px;
+  flex: 0 0 250px;
   background-color: rgb(18 138 201);
   margin-right: 88px;
   z-index: 2;
-  padding: 130px 105px 70px 105px;
+  padding: 88px 70px 50px 70px;
 }
 .about_page .top .item_list .item {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 300;
   margin-bottom: 60px;
   color: #fff;
@@ -57,68 +54,145 @@
   margin-bottom: 0;
 }
 .about_page .top .item_list .item .pic {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+.about_page .top .item_list .item .pic img {
+  width: 40px;
 }
 
 .about_page .bottom {
   background-color: #dedede;
   display: flex;
   justify-content: flex-end;
-  padding: 160px 75px;
+  padding: 110px 60px 80px 60px;
   position: relative;
-  margin-top: -125px;
+  margin-top: -85px;
 }
 .about_page .bottom .pic {
   position: absolute;
   top: 50%;
-  left: -140px;
+  left: -100px;
   transform: translateY(-50%);
-  width: 615px;
+  width: 500px;
   box-shadow: 2px 2px 10px #333;
 }
 .about_page .bottom .text {
-  flex: 0 0 860px;
+  flex: 0 0 590px;
 }
 .about_page .bottom .text .title {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  line-height: 1;
   color: #4d4d4d;
 }
 .about_page .bottom .text .desc {
-  font-size: 2rem;
-  line-height: 2;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+@media (max-width: 1200px) {
+  .about_page .container {
+    max-width: 100%;
+  }
+  .about_page .top {
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+  .about_page .top .text {
+    flex: 0 0 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-right: 0;
+  }
+  .about_page .top .text .title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  .about_page .top .text .title::before {
+    display: none;
+  }
+  .about_page .top .text .desc {
+    font-size: 1.25rem;
+  }
+  .about_page .top .item_list {
+    flex: 0 0 calc(100% + 30px);
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0 -15px;
+  }
+  .about_page .top .item_list .item {
+    margin-bottom: 0;
+    margin-right: 60px;
+    font-size: 1rem;
+  }
+  .about_page .top .item_list .item:last-child {
+    margin-right: 0;
+  }
+  .about_page .top .item_list .item .pic {
+    margin-bottom: 15px;
+  }
+  .about_page .top .item_list .item .pic img {
+    width: 45px;
+  }
+  .about_page .bottom {
+    margin-top: 0;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    justify-content: center;
+    padding: 40px 15px;
+  }
+  .about_page .bottom .pic {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: translateX(0);
+    margin-bottom: 30px;
+  }
+  .about_page .bottom .text {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  .about_page .bottom .text .title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  .about_page .bottom .text .desc {
+    font-size: 1.25rem;
+  }
 }
 
 /*購物流程*/
 .float_page {
-  padding-top: 150px;
+  padding-top: 100px;
   background-color: #eaeaea;
 }
 .float_page .title {
   text-align: center;
-  max-width: 1150px;
+  max-width: 780px;
   width: 100%;
   margin: 0 auto;
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #0185cd;
-  padding-bottom: 50px;
-  margin-bottom: 140px;
+  padding-bottom: 40px;
+  margin-bottom: 100px;
   border-bottom: 2px solid #0185cd;
 }
 .float_page .list {
   display: flex;
-  margin-bottom: 170px;
+  margin-bottom: 116px;
 }
 .float_page .list .item {
   flex: 1;
   text-align: center;
 }
 .float_page .list .item .image {
-  max-width: 225px;
+  max-width: 150px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   position: relative;
 }
 .float_page .list .item .image::after {
@@ -126,8 +200,8 @@
   background-image: url(../images/float/arrow.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 24px;
-  height: 40px;
+  width: 20px;
+  height: 32px;
   position: absolute;
   top: 50%;
   right: -30%;
@@ -138,12 +212,12 @@
 }
 .float_page .list .item .name {
   color: #0185cd;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .float_page .list .item .desc {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .float_page .contact_btn {
   display: flex;
@@ -151,56 +225,78 @@
   align-items: center;
   padding-bottom: 120px;
 }
+.float_page .contact_btn .txt {
+  font-size: 1.25rem;
+  color: #585858;
+  margin-bottom: 30px;
+}
 .float_page .contact_btn a {
-  width: 170px;
-  height: 50px;
+  width: 115px;
+  height: 35px;
   border-radius: 50px;
   color: #fff;
   background-color: #0185cd;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
-
+  font-size: 1.25rem;
   text-decoration: none;
 }
 .float_page .contact_btn a:hover {
   opacity: 0.8;
 }
-.float_page .contact_btn .txt {
-  font-size: 1.65rem;
-  color: #585858;
-  margin-bottom: 45px;
+@media (max-width: 1200px) {
+  .float_page {
+    padding-top: 50px;
+  }
+  .float_page .title {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  .float_page .list {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .float_page .list .item {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+  .float_page .list .item .image::after {
+    display: none;
+  }
+  .float_page .contact_btn {
+    padding-bottom: 50px;
+  }
 }
 
 /*聯絡我們*/
 .contact_page {
-  border-top: 170px solid #0185cd;
+  border-top: 130px solid #0185cd;
 }
 .contact_page .top {
   background-image: url(../images/contact/avel-chuklanov-DUmFLtMeAbQ-unsplash.jpg);
   background-size: cover;
-  padding-top: 160px;
+  padding-top: 120px;
 }
 .contact_page .top .title {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 700;
   letter-spacing: 10px;
   text-align: center;
   color: #676767;
-  margin-bottom: 160px;
+  margin-bottom: 120px;
 }
 .contact_page .top .form {
-  max-width: 685px;
+  max-width: 660px;
   width: 100%;
   margin-left: auto;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 .contact_page .top .form .name {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #0185cd;
   font-weight: bold;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .contact_page .top .form .inputs {
   display: flex;
@@ -210,14 +306,14 @@
 .contact_page .top .form .inputs .input {
   flex: 0 0 100%;
   padding: 0 15px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .contact_page .top .form .inputs .input.half {
   flex: 0 0 50%;
 }
 .contact_page .top .form .inputs .input label {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #0185cd;
   padding-left: 10px;
 }
@@ -226,45 +322,45 @@
   width: 100%;
   background-color: #fff;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 15px;
   box-shadow: 5px 5px 5px #ccc;
   outline: none;
-  padding: 10px 20px;
+  padding: 6px 10px;
 }
 .contact_page .top .form .inputs .input textarea {
   padding: 20px;
-  min-height: 400px;
+  min-height: 300px;
 }
-.contact_page .top .form .send{
-  width: 250px;
-  height: 60px;
+.contact_page .top .form .send {
+  width: 200px;
+  height: 50px;
   background-color: #0185cd;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.75rem;
   border-radius: 50px;
-  margin-top: 30px;
+  margin-top: 20px;
   cursor: pointer;
 }
-.contact_page .top .form .send:hover{
-  opacity: .8;
+.contact_page .top .form .send:hover {
+  opacity: 0.8;
 }
-.contact_page .top .bg_text{
-  padding-bottom: 130px;
+.contact_page .top .bg_text {
+  padding-bottom: 100px;
   text-align: right;
   color: #fff;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   letter-spacing: 10px;
 }
-.contact_page .bottom{
+.contact_page .bottom {
   padding-bottom: 29%;
   position: relative;
 }
-.contact_page .bottom iframe{
+.contact_page .bottom iframe {
   position: absolute;
   top: 0;
   left: 0;
