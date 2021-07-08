@@ -429,3 +429,65 @@ footer .con .right .info .item label {
     margin-right: 20px;
   }
 }
+
+/*購物車按鈕*/
+.cart_pop {
+  position: fixed;
+  right: 10px;
+  top: 25%;
+  z-index: 4;
+}
+.cart_pop .cart_btn {
+  cursor: pointer;
+  width: 66px;
+}
+.cart_pop .cart_btn:hover {
+  opacity: 0.8;
+}
+.cart_pop .cart_con {
+  position: absolute;
+  right: 80px;
+  top: 30px;
+  width: 270px;
+  background-color: #fff;
+  padding: 30px 15px 0 15px;
+  border: 1px solid #aaa;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition-duration: 0.3s;
+}
+.cart_pop.active .cart_con {
+  transform: scaleY(1);
+}
+.cart_pop .cart_con .list .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cart_pop .cart_con .list .item:last-child {
+  margin-bottom: 0;
+}
+.cart_pop .cart_con .list .item .image {
+  flex: 0 0 80px;
+  margin-right: 10px;
+}
+.cart_pop .cart_con .list .item .name {
+  margin-bottom: 5px;
+}
+.cart_pop .cart_con .list .item .price_qty {
+  color: #aaa;
+}
+.cart_pop .cart_con .go_cart {
+  border-top: 1px solid #aaa;
+  margin: 0 -15px;
+  margin-top: 20px;
+}
+.cart_pop .cart_con .go_cart a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  font-size: 1.25rem;
+  color: #333;
+  letter-spacing: 5px;
+}

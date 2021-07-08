@@ -2,20 +2,21 @@ let body = document.querySelector('body')
 let header = document.querySelector('header')
 let header_bottom = header.offsetTop + header.offsetHeight
 
-/*初始化設定 */
-if(window.pageYOffset>header_bottom){
+/*header捲動 初始化設定 */
+if (window.pageYOffset > header_bottom) {
   header.classList.add('fixed')
-}else{
+} else {
   header.classList.remove('fixed')
 }
-window.addEventListener('scroll',()=>{
-  if(window.pageYOffset>header_bottom){
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > header_bottom) {
     header.classList.add('fixed')
-  }else{
+  } else {
     header.classList.remove('fixed')
   }
 })
 
+/*選單及搜尋按鈕 */
 let menu_btn = document.querySelector('header .head_contain .menu_btn')
 let menu = document.querySelector('header .head_contain ul.head_nav')
 
@@ -62,6 +63,12 @@ menu_btn.addEventListener('click', () => {
   menu.classList.toggle('active')
 })
 
+let cart_btn = document.querySelector('.cart_pop .cart_btn')
+cart_btn.addEventListener('click',()=>{
+  cart_btn.parentNode.classList.toggle('active')
+})
+
+/*首頁向下滑動 */
 let arrow_down = document.querySelector('.index_top .arrow_down')
 if (arrow_down)
   arrow_down.addEventListener('click', () => {
@@ -72,6 +79,7 @@ if (arrow_down)
     })
   })
 
+/*產品左側選單 */
 let left_menu = document.querySelector('.product_frame .left_menu')
 if (left_menu) {
   let left_menu_items = left_menu.querySelectorAll(
@@ -108,6 +116,7 @@ if (left_menu) {
   })
 }
 
+/*產品數量 */
 let qty = document.querySelector('.product_info .top .qty .input input')
 let minus = document.querySelector('.product_info .top .qty .input .minus')
 let plus = document.querySelector('.product_info .top .qty .input .plus')
@@ -121,6 +130,7 @@ if (qty) {
   })
 }
 
+/*產品葉面切換 */
 let tabs = document.querySelectorAll('.product_info .bottom ul.tabs li')
 let panels = document.querySelectorAll('.product_info .bottom ul.panels li')
 tabs.forEach((item, index) => {

@@ -24,6 +24,11 @@
 .cart_page .top .table .tbody .tr:last-child {
   border-bottom: none;
 }
+.cart_page .top .table .tbody .tr .t_group {
+  flex: 6;
+  display: flex;
+  align-items: center;
+}
 .cart_page .top .table .tbody .tr .td {
   flex: 1;
   display: flex;
@@ -67,6 +72,72 @@
 .cart_page .top .table .operate {
   display: flex;
   justify-content: center;
+}
+@media (max-width: 1200px) {
+  .cart_page .top{
+    padding-top: 20px;
+  }
+  .cart_page .top .table{
+    margin-bottom: 50px;
+  }
+  .cart_page .top .table .thead {
+    display: none;
+  }
+  .cart_page .top .table .tbody .tr {
+    flex-wrap: wrap;
+  }
+  .cart_page .top .table .tbody .tr .t_group {
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  .cart_page .top .table .tbody .tr .t_group .td {
+    margin-bottom: 20px;
+  }
+  .cart_page .top .table .tbody .tr .t_group .td:last-child {
+    margin-bottom: 0;
+  }
+  .cart_page .top .table .tfoot{
+    padding: 15px;
+  }
+  .cart_page .top .table .tfoot .td{
+    margin-right: 10px;
+    font-size: 1.25rem;
+  }
+  .cart_page .top .table .tfoot .td:last-child{
+    margin-right: 0;
+  }
+  .cart_page .top .table .pic{
+    margin-right: 20px;
+  }
+  .cart_page .top .table .name,
+  .cart_page .top .table .price,
+  .cart_page .top .table .qty,
+  .cart_page .top .table .m_total {
+    flex: 0 0 100% !important;
+  }
+  .cart_page .top .table .price,
+  .cart_page .top .table .m_total {
+    justify-content: space-between;
+  }
+  .cart_page .top .table .qty select {
+    width: 100% !important;
+  }
+  .cart_page .top .table .price::before,
+  .cart_page .top .table .m_total::before {
+    content: attr(data-name);
+  }
+  .cart_page .top .table .operate{
+    justify-content: flex-end;
+  }
+  .cart_page .top .table .operate i{
+    font-size: 1rem !important;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  .cart_page .top .table .operate i::before{
+    content: '移除';
+  }
 }
 
 .cart_page .bottom .title {
@@ -170,4 +241,26 @@
   font-weight: 700;
   text-align: center;
   line-height: 2;
+}
+
+@media (max-width: 1200px) {
+  .cart_page .bottom .title{
+    margin-bottom: 30px;
+  }
+  .cart_page .bottom .form{
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  .cart_page .bottom .form .left{
+    flex: 0 0 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .cart_page .bottom .form .left .input{
+    margin-bottom: 20px;
+  }
+  .cart_page .btns{
+    margin-bottom: 50px;
+  }
 }
