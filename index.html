@@ -12,6 +12,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./offset/fontawesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./offset/owlCarousel/css/owl.carousel.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
@@ -27,9 +31,7 @@
             </div>
             <div class="text">
               <div class="name">500kg摺疊式手推車(5吋輪組)</div>
-              <div class="price_qty">
-                $1200*1
-              </div>
+              <div class="price_qty">$1200*1</div>
             </div>
           </div>
           <div class="item">
@@ -38,9 +40,7 @@
             </div>
             <div class="text">
               <div class="name">500kg摺疊式手推車(5吋輪組)</div>
-              <div class="price_qty">
-                $1200*1
-              </div>
+              <div class="price_qty">$1200*1</div>
             </div>
           </div>
         </div>
@@ -111,25 +111,39 @@
     <div class="index_products">
       <div class="container">
         <div class="title"><span>商品介紹</span></div>
-        <div class="list">
-          <a href="#" class="item" data-name="腳輪系列"
-            ><div
-              class="pic"
-              style="background-image: url(./images/index/product_01.png)"
-            ></div
-          ></a>
-          <a href="#" class="item" data-name="腳輪系列"
-            ><div
-              class="pic"
-              style="background-image: url(./images/index/product_01.png)"
-            ></div
-          ></a>
-          <a href="#" class="item" data-name="腳輪系列"
-            ><div
-              class="pic"
-              style="background-image: url(./images/index/product_01.png)"
-            ></div
-          ></a>
+        <div class="list owl-carousel owl-theme">
+          <div class="item">
+            <a href="#" data-name="腳輪系列"
+              ><div
+                class="pic"
+                style="background-image: url(./images/index/product_01.png)"
+              ></div
+            ></a>
+          </div>
+          <div class="item">
+            <a href="#" data-name="腳輪系列"
+              ><div
+                class="pic"
+                style="background-image: url(./images/index/product_01.png)"
+              ></div
+            ></a>
+          </div>
+          <div class="item">
+            <a href="#" data-name="腳輪系列"
+              ><div
+                class="pic"
+                style="background-image: url(./images/index/product_01.png)"
+              ></div
+            ></a>
+          </div>
+          <div class="item">
+            <a href="#" data-name="腳輪系列"
+              ><div
+                class="pic"
+                style="background-image: url(./images/index/product_01.png)"
+              ></div
+            ></a>
+          </div>
         </div>
         <div class="more"><a href="#">所有商品</a></div>
       </div>
@@ -228,6 +242,24 @@
       integrity="sha512-k2WPPrSgRFI6cTaHHhJdc8kAXaRM4JBFEDo1pPGGlYiOyv4vnA0Pp0G5XMYYxgAPmtmv/IIaQA6n5fLAyJaFMA=="
       crossorigin="anonymous"
     ></script>
+    <script src="./offset/owlCarousel/js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+      $('.index_products .list').owlCarousel({
+        loop: true,
+        margin: 0,
+        dots: false,
+        responsive: {
+          0: {
+            items: 2,
+            nav: false,
+          },
+          1200: {
+            items: 3,
+            nav: true,
+          },
+        },
+      })
+    </script>
   </body>
 </html>
