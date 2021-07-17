@@ -91,20 +91,20 @@ if (left_menu) {
     if (left_menu_item) {
       let height = left_menu_item.offsetHeight
 
-      if (item.classList.contains('active')) {
-        left_menu_item.style.height = height + 'px'
-      } else {
-        left_menu_item.style.height = '0px'
-      }
+      // if (item.classList.contains('active')) {
+      //   left_menu_item.style.height = height + 'px'
+      // } else {
+      //   left_menu_item.style.height = '0px'
+      // }
 
       let left_menu_items_btn = item.querySelector('.name')
       left_menu_items_btn.addEventListener('click', () => {
         left_menu_items_btn.parentElement.classList.toggle('active')
-        if (left_menu_items_btn.parentElement.classList.contains('active')) {
-          left_menu_item.style.height = height + 'px'
-        } else {
-          left_menu_item.style.height = '0px'
-        }
+        // if (left_menu_items_btn.parentElement.classList.contains('active')) {
+        //   left_menu_item.style.height = height + 'px'
+        // } else {
+        //   left_menu_item.style.height = '0px'
+        // }
       })
     }
   })
