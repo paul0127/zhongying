@@ -258,6 +258,13 @@
   font-size: 1.05rem;
   padding-bottom: 20px;
 }
+.product_frame .product_border .product_info .top .text .text_top .desc span {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
 .product_frame .product_border .product_info .top .text .text_botoom {
   padding-top: 10px;
   border-top: 1px solid #333;
