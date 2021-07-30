@@ -451,11 +451,11 @@
   padding-left: 0;
   margin-bottom: 80px;
 }
-.product_frame .product_border .product_info .bottom ul.panels li {
+.product_frame .product_border .product_info .bottom ul.panels > li {
   padding-top: 40px;
   display: none;
 }
-.product_frame .product_border .product_info .bottom ul.panels li.active {
+.product_frame .product_border .product_info .bottom ul.panels > li.active {
   display: block;
 }
 @media (max-width: 1200px) {

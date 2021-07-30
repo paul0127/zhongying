@@ -132,7 +132,7 @@ if (qty) {
 
 /*產品葉面切換 */
 let tabs = document.querySelectorAll('.product_info .bottom ul.tabs li')
-let panels = document.querySelectorAll('.product_info .bottom ul.panels li')
+let panels = document.querySelectorAll('.product_info .bottom ul.panels > li')
 tabs.forEach((item, index) => {
   item.addEventListener('click', () => {
     remove_class(tabs)
