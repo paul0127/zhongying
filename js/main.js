@@ -64,7 +64,7 @@ menu_btn.addEventListener('click', () => {
 })
 
 let cart_btn = document.querySelector('.cart_pop .cart_btn')
-cart_btn.addEventListener('click',()=>{
+cart_btn.addEventListener('click', () => {
   cart_btn.parentNode.classList.toggle('active')
 })
 
@@ -100,6 +100,21 @@ if (left_menu) {
   let left_menu_ul = left_menu.querySelector('ul')
   left_menu_title.addEventListener('click', () => {
     left_menu_ul.classList.toggle('active')
+  })
+}
+
+/* 產品圖更換 */
+let product_image = document.querySelector('.product_info .main_pic')
+if (product_image) {
+  let product_main_image = product_image.querySelector('.image')
+  console.log(product_main_image)
+  let product_items = product_image.querySelectorAll('.img_list .item a')
+  product_items.forEach((item) => {
+    item.addEventListener('click', () => {
+      let data = item.dataset.image
+      console.log(data)
+      product_main_image.style.backgroundImage = 'url(' + data + ')'
+    })
   })
 }
 

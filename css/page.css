@@ -219,6 +219,28 @@
 .float_page .list .item .desc {
   font-size: 1.25rem;
 }
+.float_page .payment{
+  max-width: 350px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  margin-bottom: 120px;
+  text-align: center;
+}
+.float_page .payment .name{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.float_page .payment .item{
+  margin-bottom: 10px;
+}
+.float_page .payment .item:last-child{
+  margin-bottom: 0;
+}
+.float_page .payment .item label{
+  margin-bottom: 0;
+}
+
 .float_page .contact_btn {
   display: flex;
   flex-direction: column;
@@ -263,6 +285,9 @@
   }
   .float_page .list .item .image::after {
     display: none;
+  }
+  .float_page .payment{
+    margin-bottom: 80px;
   }
   .float_page .contact_btn {
     padding-bottom: 50px;
