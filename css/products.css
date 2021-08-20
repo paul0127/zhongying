@@ -198,7 +198,7 @@
     transition: all 0.3s;
   }
   .product_frame .left_menu .left_menu_border > ul.active {
-    transform: scaleY(100%);
+    transform: scaleY(1);
   }
   .product_frame .left_menu .left_menu_border > ul > li {
     margin-bottom: 10px;
